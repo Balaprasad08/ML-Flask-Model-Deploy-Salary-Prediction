@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Salary Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('static/images/32.jpg');
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container{
+      border: 2px solid white;
+      margin: 35px 55px;
+      padding: 28px 10px;
+      width: 35%;
+      height: 75%;
+      display: block;
+      border-radius: 40px;
+      position: absolute;
+      right: 30px;
+    }
+    .container h2{
+      width: 70%;
+      background-color: #ffcf40;
+      border-radius: 40px;
+      margin: 30px auto;
+      padding: 10px 10px;
+      text-align: center;
+      display: block;
+      color:black;
+      font-size: 25px;
+      border: 2PX solid white;
+    }
+    .form-group input{
+      text-align: center;
+      display: block;
+      width: 40%;
+      padding: 10px;
+      border: 2px solid black;
+      margin: 8px auto;
+      border-radius: 40px;
+      font-size: 20px;
+
+    }
+    .btn{
+      margin: 30px 70px;
+      padding: 10px 5px;
+      width: 22%;
+      color:white;
+      font-size: 20px;
+      border-radius: 20px;
+      background-color: black;
+      border: 2px solid white;
+    }
+    .rslt{
+      margin: -36px 271px;
+      padding: 12px 21px;
+      width: 20%;
+      color:white;
+      font-size: 20px;
+      background-color: black;
+    }
+    .btn:hover{
+      text-decoration: underline;
+      background-color: #ffcf40;
+      color: blue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class=>Employee Salary Prediction</h2>
+    <form action="predict" method="POST">
+      <div class="form-group">
+        <input type="text" name="experience" placeholder="Experience" required="required"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="test_score(out of 10)" placeholder="Test Score" required="required"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="interview_score(out of 10)" placeholder="Interview Score" required="required"/>
+      </div>
+      <button class="btn">Predict</button>
+      <div class="rslt">${{result}}</div>
+    </form>
+  </div>
+</body>
+
+</html>
